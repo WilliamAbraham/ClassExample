@@ -5,9 +5,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class FileWriterReader{
-    public static void write(String text){
+    public static void write(String path, String text){
         try{
-            FileWriter myWriter = new FileWriter("newText.txt");
+            FileWriter myWriter = new FileWriter(path);
             myWriter.write(text);
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
@@ -34,7 +34,7 @@ public class FileWriterReader{
 
     public static void main(String[] args){
         String Ari = "I Like Ari";
-        write(Ari);
+        write("arilover12.txt", Ari);
         File obj = new File("/Users/williamabraham/Desktop/ClassExample/randomText.txt");
         read(obj);
     }
