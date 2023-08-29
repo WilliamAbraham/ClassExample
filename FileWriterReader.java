@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class FileWriterReader
 {
-    public void write(String fileName, String content)
+    public static void write(String fileName, String content)
     {
         try
         {
@@ -21,7 +21,7 @@ public class FileWriterReader
             e.printStackTrace();
         }
     }
-    public void read(File txt)
+    public static void read(File txt)
     {
         try 
         {
@@ -41,7 +41,7 @@ public class FileWriterReader
         }
     }
 
-    public int countCharacters(String fileName) throws IOException
+    public static int countCharacters(String fileName) throws IOException
     {
         BufferedReader br = new BufferedReader(new FileReader (fileName));
         int count = 0;
@@ -53,10 +53,13 @@ public class FileWriterReader
         br.close();
         return count;
     }
-    public static void main(String[] args){
-        String Ari = "I Like Ari";
-        write("arilover12.txt", Ari);
-        File obj = new File("randomText.txt");
+    public static void main(String[] args) throws IOException{
+        String test = "test";
+        write("writtenFile.txt", test);
+
+        File obj = new File("testFile.txt");
         read(obj);
+        
+        System.out.println(countCharacters("testFile.txt"));
     }
 }
