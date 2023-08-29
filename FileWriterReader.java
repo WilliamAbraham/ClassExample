@@ -35,7 +35,7 @@ public class FileWriterReader{
     public static void main(String[] args){
         String Ari = "I Like Ari";
         write("arilover12.txt", Ari);
-        File obj = new File("/Users/williamabraham/Desktop/ClassExample/randomText.txt");
+        File obj = new File("randomText.txt");
         read(obj);
     }
 }
