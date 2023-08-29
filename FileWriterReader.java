@@ -53,4 +53,10 @@ public class FileWriterReader
         br.close();
         return count;
     }
+    public static void main(String[] args){
+        String Ari = "I Like Ari";
+        write("arilover12.txt", Ari);
+        File obj = new File("randomText.txt");
+        read(obj);
+    }
 }
